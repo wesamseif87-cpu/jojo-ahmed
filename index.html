@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>من أحمد لجوجو ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Amiri:wght@700&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Amiri:wght@700&display=swap');
+:root{--bg:#090509;--panel:#190b13;--panel2:#24101b;--wine:#68152f;--wine2:#9e2447;--rose:#ff789b;--soft:#ffd7e1;--gold:#e9c58a;--muted:#c9aeb8;--line:rgba(233,197,138,.22)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{font-family:'Cairo',sans-serif;background:radial-gradient(ellipse at 50% -10%,#421326 0%,#160811 38%,var(--bg) 75%);color:#fff;overflow-x:hidden;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.16;background-image:radial-gradient(#f8c8d5 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+/* LOADING */
+#loader{position:fixed;inset:0;background:radial-gradient(circle at 50% 42%,#76203e 0%,#310d20 27%,#130710 62%,#050306 100%);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:opacity 1s,visibility 1s}
+#loader:before,#loader:after{content:"";position:absolute;width:min(78vw,520px);aspect-ratio:1;border:1px solid #f1c98735;border-radius:50%;box-shadow:0 0 55px #ff789b16,inset 0 0 55px #ff789b12;animation:loaderOrbit 13s linear infinite}
+#loader:after{width:min(60vw,390px);border-style:dashed;border-color:#ff9db544;animation-direction:reverse;animation-duration:19s}
+#loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes loaderOrbit{to{transform:rotate(360deg)}}
+.loader-core{position:relative;width:150px;height:150px;display:grid;place-items:center;margin-bottom:23px}
+.loader-ring{position:absolute;inset:0;border:2px solid transparent;border-top-color:var(--gold);border-right-color:#ff789b;border-radius:50%;filter:drop-shadow(0 0 12px #ff789b99);animation:loaderSpin 2s linear infinite}
+.loader-ring.r2{inset:12px;border-top-color:#fff2d8;border-right-color:transparent;border-bottom-color:#ff789b;animation-duration:3s;animation-direction:reverse}
+@keyframes loaderSpin{to{transform:rotate(360deg)}}
+.loader-heart{font-size:66px;filter:drop-shadow(0 0 22px #ff789b);animation:beat 1s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.19)}}
+.loader-text{font-size:clamp(27px,6vw,42px);font-weight:900;color:#fff0f4;text-shadow:0 0 12px #ff789b,0 0 35px #ff789b99;letter-spacing:.5px;animation:loaderGlow 2s ease-in-out infinite alternate}
+@keyframes loaderGlow{to{text-shadow:0 0 18px #ff789b,0 0 48px #ff789b}}
+.loader-sub{color:#f0cbd6;margin-top:10px;font-size:14px;letter-spacing:.4px}
+.loader-names{margin-top:18px;color:var(--gold);font-size:12px;letter-spacing:4px;font-weight:800}
+.bar{width:min(260px,70vw);height:7px;background:#ffffff18;border:1px solid #ffffff20;border-radius:30px;margin-top:23px;overflow:hidden;box-shadow:0 0 22px #ff789b20}
+.bar i{display:block;height:100%;width:0;border-radius:30px;background:linear-gradient(90deg,var(--gold),var(--rose),#fff);box-shadow:0 0 18px var(--rose);animation:load 2.8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes load{to{width:100%}}
+.loader-stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(#ffe6ef 1px,transparent 1.8px),radial-gradient(#e9c58a 1px,transparent 1.8px);background-size:73px 73px,113px 113px;background-position:0 0,35px 42px;opacity:.28;mask-image:radial-gradient(ellipse,#000,transparent 72%)}
+/* HERO */
+.hero{min-height:100svh;isolation:isolate;background:radial-gradient(ellipse at 50% 32%,rgba(126,24,59,.56),transparent 52%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:38px 18px 55px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid #e9c58a20;border-radius:50%;z-index:-1;animation:orbit 24s linear infinite}
+.hero:before{top:9%;left:-190px;box-shadow:0 0 70px #9e244722,inset 0 0 70px #9e244711}
+.hero:after{bottom:-230px;right:-140px;width:470px;height:470px;animation-direction:reverse}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.badge{background:linear-gradient(110deg,#ffffff12,#e9c58a16);border:1px solid var(--line);color:#f7dce4;padding:9px 19px;border-radius:40px;font-size:12px;letter-spacing:1.5px;box-shadow:0 8px 35px #0005;backdrop-filter:blur(12px)}
+.hero h1{font-size:clamp(39px,8vw,68px);line-height:1.2;margin:24px 0 12px;font-weight:900;letter-spacing:-1px;text-shadow:0 8px 35px #0008}
+.hero h1 span{color:var(--rose);filter:drop-shadow(0 0 15px #ff789b55)}
+.hero p{color:#e9cbd5;max-width:620px;line-height:2;font-size:clamp(14px,2vw,17px)}
+.from{margin-top:17px;background:linear-gradient(120deg,#f3d8df,#e9c58a);color:#3c1021;padding:9px 23px;border-radius:30px;font-weight:900;box-shadow:0 8px 28px #e9c58a24}
+/* ENVELOPE */
+.envelope-wrap{margin:38px auto 0;text-align:center;position:relative}
+.envelope{width:340px;max-width:88vw;height:218px;background:linear-gradient(145deg,#a52b50,#551027);position:relative;border-radius:16px;cursor:pointer;margin:0 auto;box-shadow:0 25px 65px #0009,0 0 0 1px #e9c58a55,0 0 35px #9e244733;transition:transform .35s,box-shadow .35s;perspective:900px}
+.envelope:hover{transform:translateY(-7px) scale(1.025);box-shadow:0 32px 75px #000b,0 0 0 1px #e9c58a99,0 0 50px #9e244766}
+.envelope .flap{position:absolute;top:0;left:0;width:100%;height:116px;background:linear-gradient(145deg,#c24a6d,#811a3b);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:16px 16px 0 0;z-index:3;transition:transform .85s;transform-origin:top;filter:drop-shadow(0 5px 5px #0003)}
+.envelope.open .flap{transform:rotateX(180deg)}
+.envelope .body-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;padding-top:26px}
+.envelope .body-text b{font-size:27px;text-shadow:0 2px 12px #300817}
+.envelope .body-text span{font-size:13px;color:#ffe1e8;margin-top:5px}
+.seal{width:59px;height:59px;background:linear-gradient(135deg,#ffe9ee,#e9c58a);color:#65142e;border:2px solid #fff8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:29px;position:absolute;top:84px;left:50%;transform:translateX(-50%);z-index:4;box-shadow:0 7px 20px #30081799}
+.tap{margin-top:19px;color:#f3bdce;font-size:14px;animation:tap 1.7s ease-in-out infinite}
+@keyframes tap{50%{opacity:.55;transform:translateY(4px)}}
+/* MESSAGE */
+#message{display:none;position:relative;z-index:2;max-width:920px;margin:0 auto;padding:18px 20px 70px}
+#message.show{display:block;animation:fade .9s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.sec-title{text-align:center;font-size:clamp(26px,5vw,39px);font-weight:900;margin:28px 0 25px;line-height:1.65}
+.sec-title span{color:var(--rose);text-shadow:0 0 20px #ff789b33}
+.btns{display:flex;gap:13px;flex-wrap:wrap;justify-content:center;margin:25px 0 35px}
+button{border:1px solid transparent;cursor:pointer;padding:13px 25px;border-radius:40px;font-family:inherit;font-weight:900;font-size:15px;transition:transform .25s,box-shadow .25s,background .25s}
+button:hover{transform:translateY(-3px)}
+.btn-main{background:linear-gradient(120deg,#b52d55,#71142f);color:#fff;box-shadow:0 9px 25px #9e244744;border-color:#ffb5c744}
+.btn-main:hover{box-shadow:0 13px 32px #9e244777}
+.btn-ghost{background:#ffffff0b;color:#f7dce4;border-color:#e9c58a66;backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:#ffffff18}
+.card{position:relative;isolation:isolate;background:linear-gradient(145deg,rgba(43,17,30,.96),rgba(19,8,15,.98));border:1px solid #e9c58a38;border-radius:24px;padding:clamp(20px,4vw,34px);margin-bottom:25px;line-height:2.15;font-size:16px;color:#f3e5e9;box-shadow:0 18px 50px #0005,inset 0 1px #ffffff0b;overflow:hidden}
+.card:before{content:"";position:absolute;z-index:-1;top:0;right:0;width:120px;height:2px;background:linear-gradient(90deg,transparent,var(--gold));box-shadow:0 0 18px #e9c58a88}
+.card:after{content:"✦";position:absolute;left:20px;top:14px;color:#e9c58a66;font-size:18px}
+.card p{margin:0 0 15px}
+.card p:last-child{margin-bottom:0}
+.card h2{color:#ff9db5;font-size:clamp(20px,3vw,25px);margin-bottom:15px;font-weight:900}
+.card h3{color:var(--gold);font-size:18px;margin:24px 0 10px}
+.card ul{list-style:none;margin:12px 0}
+.card ul li{padding:8px 12px;border-bottom:1px dashed #ffffff18;position:relative}
+.card ul li:before{content:"♥";color:var(--rose);margin-left:9px;font-size:12px}
+.divider{text-align:center;color:var(--rose);font-size:22px;margin:30px 0;letter-spacing:8px;text-shadow:0 0 18px #ff789b66}
+.footer{position:relative;z-index:2;text-align:center;padding:35px 15px 45px;color:#d4b3bf;background:linear-gradient(180deg,transparent,#170811aa);line-height:2}
+.footer p:first-child{color:var(--gold);font-weight:800}
+.hearts{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}
+.heart{position:absolute;animation:float 5s linear forwards;opacity:.8;filter:drop-shadow(0 0 8px #ff789b55)}
+@keyframes float{0%{transform:translateY(105vh) rotate(0deg);opacity:0}12%{opacity:.85}100%{transform:translateY(-110px) rotate(25deg);opacity:0}}
+
+/* LOADER: live percentage + tiny running character */
+.bar{position:relative;height:12px;width:min(310px,76vw);overflow:visible;margin-top:27px}
+.bar i{width:0;animation:none;transition:width .08s linear}
+.loader-runner{position:absolute;top:-27px;left:0;font-size:22px;transform:translateX(-50%);filter:drop-shadow(0 0 8px #ffd7e1);transition:left .08s linear;animation:runnerBounce .42s ease-in-out infinite alternate}
+@keyframes runnerBounce{to{transform:translate(-50%,-5px) rotate(8deg)}}
+.loader-percent{margin-top:13px;color:#fff;font-size:25px;font-weight:900;text-shadow:0 0 15px #ff789b;direction:ltr;font-variant-numeric:tabular-nums}
+.second-stage{display:none;margin:34px auto 0;text-align:center;animation:fade .8s ease both}
+.second-stage.show{display:block}
+.stage-kicker{color:#ffe0e9;font-weight:800;margin-bottom:18px;font-size:17px;text-shadow:0 0 15px #ff789b}
+.second-envelope{transform:scale(.96);animation:secondPulse 2s ease-in-out infinite}
+.second-envelope:hover{transform:translateY(-7px) scale(1.02)}
+@keyframes secondPulse{50%{box-shadow:0 25px 65px #0009,0 0 0 5px #ff789b22,0 0 55px #ff789b66}}
+.envelope.done{pointer-events:none;filter:brightness(1.15)}
+.final-confession{border-color:#ff9db588;box-shadow:0 18px 55px #9e244733,inset 0 1px #ffffff18}
+.final-sign{text-align:center!important;color:#ffd7e1;font-size:21px;font-weight:900;text-shadow:0 0 15px #ff789b55;margin-top:25px!important}
+
+@media(max-width:600px){.hero{padding:30px 16px 45px}.hero h1{font-size:39px}.envelope{height:195px}.envelope .flap{height:104px}.seal{top:77px}.card{font-size:15px;border-radius:19px;padding:19px 17px}.sec-title{font-size:26px}#message{padding-inline:13px}.btns button{width:100%;max-width:310px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* A + envelope + J signature emblem */
+.loader-core{width:min(390px,88vw);height:150px;margin-bottom:23px}
+.loader-monogram{position:relative;z-index:2;width:100%;display:flex;align-items:center;justify-content:center;gap:clamp(13px,5vw,34px)}
+.mono-letter{font-family:Georgia,serif;font-size:clamp(54px,13vw,82px);font-weight:900;line-height:1;color:#fff1f5;text-shadow:0 0 10px #fff,0 0 24px #ff789b,0 0 42px #ff789b;animation:letterGlow 2s ease-in-out infinite alternate}
+.mono-letter:last-child{animation-delay:.6s}
+@keyframes letterGlow{to{transform:translateY(-4px);filter:brightness(1.3);text-shadow:0 0 15px #fff,0 0 35px #ff789b,0 0 58px #ff789b}}
+.mono-envelope{position:relative;width:94px;height:66px;border:2px solid #ffe6ef;border-radius:9px;background:linear-gradient(145deg,#ffb2c7,#a51d4c 70%);box-shadow:0 0 20px #ff789b,0 0 45px #ff789b88,inset 0 0 12px #fff7;transform:rotate(-5deg);animation:envFloat 1.8s ease-in-out infinite}
+.mono-envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49%,#7a1235 50%),linear-gradient(35deg,transparent 49%,#8e1b40 50%);border-radius:7px}
+.mono-envelope:after{content:"";position:absolute;left:0;right:0;top:-1px;margin:auto;width:0;height:0;border-left:45px solid transparent;border-right:45px solid transparent;border-top:35px solid #ffd2de;filter:drop-shadow(0 2px 3px #70122e88)}
+.mono-envelope b{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-10%);font-size:20px;color:#fff;filter:drop-shadow(0 0 5px #a51d4c)}
+@keyframes envFloat{50%{transform:translateY(-8px) rotate(5deg);box-shadow:0 0 28px #ff789b,0 0 60px #ff789b99,inset 0 0 12px #fff7}}
+/* Keep the first invitation envelope as the center of the first screen */
+.hero{min-height:100svh;justify-content:center}
+.envelope-wrap{margin:30px auto 0}
+.envelope{border:1px solid #ffd9e4;outline:1px solid #e9c58a66;outline-offset:7px}
+.envelope .flap{filter:drop-shadow(0 7px 9px #26071388)}
+.seal{box-shadow:0 0 0 5px #ffffff1c,0 0 26px #ff789b99,0 7px 20px #30081799}
+
+
+/* NEON LOADER */
+#loader{background:linear-gradient(180deg,#000 0%,#02010a 45%,#2a0a2e 72%,#9c1a60 100%)!important;justify-content:center;gap:0}
+#loader:before,#loader:after{display:none!important}
+.nl-glow{position:absolute;top:-20%;right:-25%;width:90vw;height:70vh;background:radial-gradient(ellipse at 70% 30%,#36b8ff99,#1650a044 40%,transparent 70%);pointer-events:none}
+.nl-stars{position:absolute;inset:0;background-image:radial-gradient(#fff6 1px,transparent 1.6px);background-size:61px 61px;opacity:.25;mask-image:linear-gradient(#000,transparent 60%)}
+.nl-hearts{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:100%;margin-top:-6vh}
+.nl-heart{position:relative;width:min(40vw,170px);aspect-ratio:100/92;flex:none;animation:nlBeat 1.8s ease-in-out infinite}
+.nl-heart.blue{animation-delay:.4s}
+.nl-heart svg{width:100%;height:100%;overflow:visible}
+.nl-heart span{position:absolute;inset:0;display:grid;place-items:center;padding-bottom:6%;font:300 clamp(46px,14vw,70px)/1 Arial,sans-serif;color:#fff;text-shadow:0 0 6px #fff,0 0 16px #ff4f9a,0 0 34px #ff4f9a}
+.nl-heart.blue span{text-shadow:0 0 6px #fff,0 0 16px #5b6cff,0 0 34px #3a4cff}
+.nl-heart.blue svg path{stroke:#ff7ab8}
+@keyframes nlBeat{50%{transform:scale(1.06)}}
+.nl-mid{position:relative;width:clamp(70px,22vw,100px);height:70px;margin:0 clamp(-26px,-5vw,-14px);z-index:3;display:grid;place-items:center}
+.nl-mid .mono-envelope{width:62px;height:44px;margin:0}
+.nl-mid .mono-envelope:after{border-left-width:29px;border-right-width:29px;border-top-width:23px}
+.nl-wing{position:absolute;top:2px;width:46px;filter:drop-shadow(0 0 8px #fff)}
+.nl-wing.l{left:-18px;animation:wingL 1.2s ease-in-out infinite alternate;transform-origin:right center}
+.nl-wing.r{right:-18px;transform:scaleX(-1);animation:wingR 1.2s ease-in-out infinite alternate;transform-origin:left center}
+@keyframes wingL{to{transform:rotate(-14deg)}}
+@keyframes wingR{from{transform:scaleX(-1) rotate(0)}to{transform:scaleX(-1) rotate(-14deg)}}
+.nl-names{position:relative;z-index:2;margin-top:22px;color:#ffd7e6;letter-spacing:6px;font-weight:800;font-size:13px;text-shadow:0 0 12px #ff4f9a}
+.nl-names span{color:#ff4f9a}
+.nl-prog{position:relative;z-index:2;margin-top:clamp(40px,12vh,110px);width:min(270px,72vw);text-align:center}
+.nl-pct{font:300 44px/1 Arial,sans-serif;color:#f4dbe8;text-shadow:0 0 14px #ff4f9a88;direction:ltr}
+.nl-label{font-size:12px;letter-spacing:3px;color:#ffffff90;margin:6px 0 16px;direction:ltr}
+.nl-prog .bar{position:relative;width:100%;margin:0;overflow:visible;height:3px;background:#ffffff30;border:0;animation:none}
+.nl-prog .bar i{animation:none;width:0;transition:width .12s linear}
+.nl-prog .loader-runner{position:absolute;top:-22px;left:0;transform:translateX(-50%);font-size:22px;filter:drop-shadow(0 0 8px #ff4f9a);animation:runBob .5s ease-in-out infinite alternate}
+@keyframes runBob{to{margin-top:-5px}}
+.nl-city{position:absolute;bottom:0;left:0;width:100%;height:20vh;z-index:1}
+
+/* ENVELOPE STAGE */
+#stage{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:46px;padding:20px;background:radial-gradient(ellipse at 50% 45%,#3d1230 0%,#12060f 55%,#060307 100%)}
+.hero,.second-stage{display:none!important}
+.env3{--w:min(320px,84vw);position:relative;width:var(--w);height:calc(var(--w)*.64);cursor:pointer;animation:envHover 3.2s ease-in-out infinite;transition:opacity 1s,transform 1s;filter:drop-shadow(0 22px 40px #000a) drop-shadow(0 0 40px #ff4f9a44)}
+@keyframes envHover{50%{transform:translateY(-10px)}}
+.env3.gone{opacity:0;transform:scale(.8) translateY(30px);animation:none}
+.env3>*{position:absolute;left:0;width:100%}
+.e-back{top:0;height:100%;background:linear-gradient(160deg,#f6e7c8,#d8b678);border-radius:10px}
+.e-letter{left:7%;width:86%;top:6%;height:88%;z-index:2;background:repeating-linear-gradient(#fffaf0 0 27px,#f0d9dd 27px 28px);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16%;text-align:center;transition:transform 1.2s cubic-bezier(.3,.8,.3,1) .5s;box-shadow:0 -4px 20px #ff4f9a55}
+.e-letter b{font:900 clamp(24px,7vw,32px)/1.3 'Amiri','Cairo',serif;color:#b0123f;text-shadow:0 0 14px #ff789b55}
+.e-letter i{font-style:normal;font-size:28px;margin-top:6px}
+.e-front{top:0;height:100%;z-index:3;background:linear-gradient(160deg,#fbefd4,#e3c386);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%);border-radius:10px}
+.e-front:before,.e-front:after{content:"";position:absolute;inset:0;background:#0000000d}
+.e-front:after{clip-path:polygon(0 100%,50% 56%,100% 100%);background:#00000012}
+.e-flap{top:0;height:58%;z-index:4;background:linear-gradient(180deg,#d9b269,#f2dcaa);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s ease,z-index 0s .45s}
+.e-seal{top:calc(58% - 24px);left:calc(50% - 24px);width:48px;height:48px;z-index:6;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff6f98,#b0123f 70%);display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:0 4px 12px #0007,inset 0 0 8px #fff5;transition:opacity .4s;animation:sealPulse 1.6s ease-in-out infinite}
+@keyframes sealPulse{50%{transform:scale(1.12)}}
+.env3.open .e-flap{transform:rotateX(180deg);z-index:1}
+.env3.open .e-seal{opacity:0;animation:none}
+.env3.open .e-letter{transform:translateY(-62%) scale(1.12)}
+.e-hint{text-align:center;color:#ffd7e6;transition:opacity .5s}
+.e-hint b{display:block;font-size:clamp(22px,6vw,30px);font-weight:900;text-shadow:0 0 18px #ff4f9a}
+.e-hint small{display:block;margin-top:10px;color:#e9c58a;font-size:14px;animation:tapPulse 1.2s ease-in-out infinite}
+@keyframes tapPulse{50%{opacity:.35}}
+.caret{display:inline-block;width:2px;height:1.05em;background:#ff789b;margin:0 3px;vertical-align:-.15em;animation:blink .7s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+#skipBtn{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:20;background:#190b13e6;color:#ffd7e1;border:1px solid #e9c58a55;border-radius:30px;padding:9px 20px;font:700 13px Cairo,sans-serif;backdrop-filter:blur(8px);cursor:pointer}
+</style>
+</head>
+<body>
+
+<div id="loader">
+<div class="nl-glow"></div><div class="nl-stars"></div>
+<div class="nl-hearts">
+<div class="nl-heart red"><svg viewBox="0 0 100 92"><defs><filter id="glred" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="flred" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#ff1744" stop-opacity=".95"/><stop offset="1" stop-color="#ff1744" stop-opacity=".12"/></radialGradient></defs><path d="M50 86C10 56 2 30 18 15C32 3 46 10 50 24C54 10 68 3 82 15C98 30 90 56 50 86Z" fill="url(#flred)" stroke="#ff6fa8" stroke-width="2.6" filter="url(#glred)"/></svg><span>A</span></div>
+<div class="nl-mid"><div class="nl-wing l"><svg viewBox="0 0 60 40"><path d="M60 22C46 4 20 2 2 12C14 12 22 15 26 19C16 18 8 20 0 26C14 24 22 26 28 30C20 31 14 34 10 38C34 38 52 34 60 22Z" fill="#fff" opacity=".95"/></svg></div><div class="nl-wing r"><svg viewBox="0 0 60 40"><path d="M60 22C46 4 20 2 2 12C14 12 22 15 26 19C16 18 8 20 0 26C14 24 22 26 28 30C20 31 14 34 10 38C34 38 52 34 60 22Z" fill="#fff" opacity=".95"/></svg></div><div class="mono-envelope"><i></i><b>♥</b></div></div>
+<div class="nl-heart blue"><svg viewBox="0 0 100 92"><defs><filter id="glblue" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="flblue" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#2a3bff" stop-opacity=".95"/><stop offset="1" stop-color="#2a3bff" stop-opacity=".12"/></radialGradient></defs><path d="M50 86C10 56 2 30 18 15C32 3 46 10 50 24C54 10 68 3 82 15C98 30 90 56 50 86Z" fill="url(#flblue)" stroke="#ff6fa8" stroke-width="2.6" filter="url(#glblue)"/></svg><span>J</span></div>
+</div>
+<div class="nl-names">AHMED <span>♥</span> JOJO</div>
+<div class="nl-prog"><div class="nl-pct" id="loaderPercent">0%</div><div class="nl-label">loading</div>
+<div class="bar"><i id="loadFill"></i><span class="loader-runner" id="loaderRunner">🥰</span></div></div>
+<svg class="nl-city" viewBox="0 0 400 90" preserveAspectRatio="none"><path d="M0 90V55h18V40h14v18h12V30h16v28h10V48h14v-14h12v20h16V36h12V58h14V44h18V24h14v34h12V50h16V38h14v22h14V46h18V32h12v26h16V52h14V42h16v18h12V50h16V90Z" fill="#ff3d8e" opacity=".28"/></svg>
+</div>
+
+<div class="hearts" id="hearts"></div>
+
+<section id="stage">
+<div class="env3" id="env3">
+  <div class="e-back"></div>
+  <div class="e-letter"><b>بحبك يا جوجو</b><i>❤️</i></div>
+  <div class="e-front"></div>
+  <div class="e-flap"></div>
+  <div class="e-seal"><span>♥</span></div>
+</div>
+<div class="e-hint" id="eHint"><b>افتحي الظرف يا جني 💌</b><small>👆 اضغطي عليه</small></div>
+</section>
+
+<main id="message">
+<h2 class="sec-title">فيه حاجة أخيرة عايز أقولها لك... <br><span>يا جوجو قلبي ❤️🥹</span></h2>
+
+
+<div id="all">
+
+<!-- الرسالة 1 -->
+<div class="card">
+<h2>يا جوجو قلبي ❤️🥹</h2>
+<p>كل سنة وإنتِ أجمل حاجة في أيامي، وكل 11/11 وإنتِ معايا وفي قلبي، وكل يوم وإنتِ بخير وسعيدة ومبسوطة، ويا رب أشوف ضحكتك دايمًا ومفيش حاجة تقدر تطفي النور اللي في عيونك. أنا مش عارف أبدأ الرسالة دي منين، ولا أقول إيه عشان أوصفلك إنتِ بالنسبالي إيه، بس كل اللي أعرفه إن الكلام مهما كان طويل مش هيقدر يوصف مكانتك عندي.</p>
+<p>عارفة يا جوجو؟ ساعات الواحد بيقابل ناس كتير في حياته، وبيتكلم مع ناس كتير، وبيعدّي عليه أيام عادية جدًا، وفجأة يدخل حياته شخص يخلي للتفاصيل الصغيرة معنى مختلف. شخص رسالة منه تقدر تغيّر شكل يوم كامل، وصوته يقدر يطمن قلبه، وضحكته تبقى من الحاجات اللي يستناها من غير ما يحس. وإنتِ بالنسبالي الشخص ده.</p>
+<p>أنا بحب تفاصيلك، بحب طريقتك، بحب كلامك حتى لما تبقي بتقولي كلام عادي جدًا، وبحب هزارك ودلعك وشقاوتك، وبحب عيونك اللي مهما حاولت أوصفها هحس إن الكلام قليل عليها. بحب إنك إنتِ، من غير ما تحتاجي تتغيري عشان ترضي حد، ومن غير ما تحتاجي تعملي أي حاجة عشان تثبتي إنك مميزة. إنتِ مميزة لمجرد إنك إنتِ يا جوجو.</p>
+<p>وعايز أقولك حاجة مهمة جدًا: أنا مش عايزك تفتكري إن وجودك في حياتي مجرد كلام حلو أو رسائل بنبعتها لبعض. أنا مقدّر وجودك، ومقدّر وقتك، ومقدّر كل مرة حاولتي فيها تفهميني، وكل مرة استحملتيني فيها، وكل لحظة حلوة جمعتنا. ولو في يوم قصّرت معاكي أو زعلتك بكلمة أو تصرف، فأنا آسف بجد. مش عايز أبرر الغلط ولا أقول إنك فهمتيني غلط؛ عايز أسمعك وأفهم إيه اللي وجعك وأحاول أصلّح اللي أقدر عليه.</p>
+<p>أنا مش مستني منك تنسي زعلك في ثانية، ولا عايزك تحسي إن لازم تردي عليا بكلام حلو لمجرد إني بعتلك رسالة طويلة. خدي وقتك، واتكلمي براحتك، وأنا عايز أفهمك بجد؛ لأن زعلك مش حاجة أعدّيها بكلمتين وخلاص.</p>
+<p>يا جوجو قلبي، أتمنى في يوم تبصي ورا وتفتكري إن كان فيه حد بيحاول يتعلم إزاي يحبك بالطريقة اللي تريحك، ويسمعك لما تتكلمي، ويحترم مشاعرك حتى لو مش فاهمها من أول مرة. أنا عايز أكون شخص وجوده في حياتك يضيفلك فرحة وراحة، مش ضغط أو تعب.</p>
+<p>ونفسي كل أمنياتك تتحقق، ونفسي تفضلي واثقة في نفسك، وتفضلي شايفة قيمتك، ومهما الدنيا ضايقتك متنسيش إنك تستاهلي كل حاجة حلوة. أتمنى تضحكي من قلبك، وتنجحي في كل حاجة بتحلمي بيها، وتعيشي أيام أجمل من كل الأيام اللي فاتت.</p>
+<p>وفي يوم 11/11 ده، مش عايز أقولك بس Happy 11/11، أنا عايز أقولك شكرًا. شكرًا على وجودك، وعلى كل لحظة حلوة، وعلى كل ضحكة، وعلى كل ذكرى بقيت جزء من حكايتنا. شكرًا إنك بقيتي شخص ليه مكانة كبيرة عندي، وشكرًا على كل حاجة حلوة عرفتها بسببك.</p>
+<p>ولو هختار أمنية واحدة لليوم ده، هتكون إن قلبك يبقى مرتاح، وإن ضحكتك متغيبش، وإن أي زعل بينا نعرف نتكلم عنه ونفهم بعض بدل ما نسيب المسافات تكبر بيننا.</p>
+<p>كل 11/11 وإنتِ جوجو قلبي، وكل يوم وإنتِ بخير، وكل يوم وإنتِ عارفة إنك غالية ومقدّرة ومشاعرك مهمة.</p>
+<p>بحب عيونك، وضحكتك، ودلعك، وكل تفصيلة صغيرة بتخليكي إنتِ. وبحب إن عندي ذكريات معاكي لسه كل ما أفتكرها تخليني أبتسم.</p>
+<p>Happy 11/11 يا أجمل جوجو في الدنيا. ❤️</p>
+</div>
+
+<div class="divider">❤️ ❤️ ❤️</div>
+
+<!-- الرسالة 2 -->
+<div class="card">
+<h2>11/11 — To My Favorite Person ❤️</h2>
+<p>يا جوجو قلبي، يا حتة من قلبي، يا أجمل صدفة وأحلى حكاية في حياتي… 🥹❤️</p>
+<p>أنا مش عارف أبدأ منين، بس عارف إن النهارده مش يوم عادي بالنسبالي، النهارده 11/11، واليوم ده خلاني أفكر فيكي وفي كل حاجة حلوة وجودك عملها في حياتي. وقررت أكتبلك رسالة يمكن تطول، ويمكن تاخد منك وقت عشان تقريها، بس أتمنى كل كلمة فيها توصلك زي ما أنا حاسسها بالظبط.</p>
+<p>يا جوجو، أنا عايزك تعرفي إنك مش مجرد شخص بكلمه كل يوم، ولا مجرد اسم بيظهر على شاشة موبايلي، ولا مجرد حد بقول له بحبك وخلاص. إنتِ بقيتي جزء من تفاصيل يومي، من تفكيري، من الحاجات اللي بتفرحني، ومن الذكريات اللي بحب أرجعلها كل شوية.</p>
+<p>عارفة إيه أكتر حاجة نفسي فيها؟ نفسي تفضلي مبسوطة. نفسي لما تصحي من النوم تلاقي يومك جميل، ولما تنامي تكوني راضية عن نفسك وعن يومك. نفسي متزعليش من نفسك أبدًا، ومتقلليش من قيمتك، ومتفتكريش للحظة إنك مش كفاية. إنتِ كفاية وزيادة، وإنتِ تستاهلي حد يسمعك ويفهمك ويحترم قلبك ومشاعرك.</p>
+<p>أنا بحب عيونك يا جوجو، وبحب لما تتكلمي بحماس عن حاجة بتحبيها، وبحب هزارك حتى لو هزارك ساعات بيجنني 😂❤️، وبحب دلعك، وبحب طريقتك في الكلام، وبحب التفاصيل اللي يمكن إنتِ نفسك مش واخدة بالك منها. ساعات التفاصيل الصغيرة بتبقى عندي أكبر من ألف موقف كبير.</p>
+<p>ونفسي تعرفي إن مش لازم تكوني طول الوقت قوية، ومش لازم تضحكي وإنتِ من جواكي متضايقة، ومش لازم تخبي زعلك عشان متزعليش حد. من حقك تتكلمي، ومن حقك تعبّري عن اللي جواكي، ومن حقك تقولي إنك متضايقة من غير ما تحسي إنك بتبالغي. أنا عايز أسمعك وأفهمك، مش أكسب نقاش معاكي.</p>
+<p>ولو أنا في يوم كنت سبب في دمعة أو زعل أو إحساس وحش جواكي، فحقك عليا. أنا آسف على أي لحظة حسّيتي فيها إني مش مقدّر مشاعرك بالشكل الكافي. ومش هقولك إن رسالة طويلة هتصلح كل حاجة، لأن اللي يصلح الزعل فعلًا هو التصرفات والتغيير والاهتمام الحقيقي.</p>
+<p>يا جوجو قلبي، أنا مش عايز علاقتنا تبقى مجرد كلام حلو في الأيام الحلوة، أنا عايزنا نعرف نتكلم حتى في الأيام الصعبة، ونختلف من غير ما نقلل من بعض، ونزعل من غير ما نجرح بعض، ونعتذر لما نغلط، ونفرح لبعض من قلبنا.</p>
+<p>أتمنى لما تقري الكلام ده تفتكري إنك غالية، وإن وجودك مش شيء عادي، وإنك تستاهلي الحب اللي فيه احترام واهتمام وصدق، مش مجرد وعود كبيرة.</p>
+<p>وبالمناسبة، أنا عندي طلب صغير جدًا 😂❤️: خلي بالك من ضحكتك، عشان دي من أجمل الحاجات اللي ممكن أشوفها، وخلي بالك من عيونك، عشان مهما كتبت عنها مش هوفيها حقها، وخلي بالك من قلبك، عشان هو يستاهل كل الحنية في الدنيا.</p>
+<p>ويا رب كل حاجة نفسك فيها تحصل، ويا رب أشوفك ناجحة وفرحانة وفخورة بنفسك، ويا رب متشوفيش غير الأيام اللي تليق بقلبك الجميل.</p>
+<p>Happy 11/11 يا جوجو قلبي. ❤️</p>
+<p>ولو الرسالة دي طويلة، فده لأن الكلام عنك مبيخلصش، ولو فيها كلام كتير، فده لأن مكانتك عندي أكبر من إني أختصرها في سطرين.</p>
+<p>بحبك يا جوجو، وربنا يديم بينا الود والاحترام والضحكة الحلوة، ويخلينا دايمًا نعرف نختار بعض بالكلام الطيب والتصرفات الحلوة. ❤️🥹</p>
+</div>
+
+<div class="divider">❤️ ❤️ ❤️</div>
+
+<!-- الرسالة 3 -->
+<div class="card">
+<h2>يا جوجو ❤️🥹</h2>
+<p>عارفة؟ أنا كل ما أجي أكتبلك رسالة بحس إن عندي كلام كتير أوي، وإن مهما كتبت ومهما طولت هيفضل فيه كلام جوايا معرفتش أوصلهولك. أصل إزاي الواحد يختصر شخص غالي عليه في كام سطر؟ وإزاي أوصفلك إحساس إن فيه إنسانة وجودها بقى مرتبط عندي بأجمل تفاصيل اليوم؟ إنتِ مش عارفة أنا ممكن أقعد قد إيه أفكر في كلمة حلوة أقولها ليكي، أو إزاي أخليكي تحسي إنك غالية عندي بجد.</p>
+<p>يا جوجو، أنا نفسي في حاجات بسيطة معاكي، بس بالنسبالي قيمتها كبيرة أوي. نفسي نحكي لبعض عن يومنا، حتى لو اليوم مفيهوش أي أحداث مهمة. نفسي نحكي عن الحاجات التافهة ونضحك عليها، ونشارك بعض أحلامنا، ونشجع بعض لما الدنيا تبقى صعبة. نفسي تبقي أول واحدة أحب أحكيلها عن حاجة فرحتني، وأول واحدة أفتكرها لما أشوف حاجة حلوة وأقول: يا ريت جوجو تشوفها.</p>
+<p>أنا مش مستني منك تكوني مثالية، ولا مستني إن كل أيامنا تبقى ضحك وهزار. إحنا بشر، بنغلط وبنزعل وبنتضايق، بس اللي يهمني إننا نتعلم من كل موقف، ونفهم بعض أكتر، ونعرف إن مشاعرنا تستحق الاهتمام.</p>
+<p>وبالمناسبة، أنا عايز أقولك إنك جني في عيني بكل تفاصيلك، وعيونك ليها حكاية لوحدها، وضحكتك من الحاجات اللي بتخليني أنسى أنا كنت متضايق من إيه 😂❤️. ودلعك ده بقى محتاج موضوع تاني لوحده، لأنك ساعات بتبقي كيوت بطريقة تخلي الواحد مش عارف يرد يقول إيه أصلًا.</p>
+<p>عارفة يا جوجو؟ أتمنى لو تقدري تشوفي نفسك بعينيّ، مش عشان أقولك كلام وخلاص، لكن عشان تعرفي قد إيه فيكي حاجات تستاهل تتحب وتتقدّر. أتمنى تعرفي إن قيمتك مش مرتبطة برأي أي حد فيكي، ولا بيوم حلو أو يوم وحش، ولا حتى بأي خلاف ممكن يحصل بينا.</p>
+<p>أنا آسف لو في لحظة خليتك تحسي إنك لوحدك، أو إن كلامك مش مهم، أو إن زعلك مش واخد حقه. أنا عايز أتعلم أكون أحسن في التعامل معاكي، وأثبتلك ده بأفعالي مش بمجرد الرسائل.</p>
+<p>ويا رب يوم 11/11 ده يبقى بداية ذكريات حلوة، وضحكات كتير، وأيام نقدر نفتكرها ونقول إنها كانت من أجمل أيامنا. ويا رب كل سنة تكوني أقرب لأحلامك، وأسعد من السنة اللي قبلها، ومليانة راحة ونجاح ورضا.</p>
+<p>وأخيرًا يا جوجو قلبي…</p>
+<p>لو سألتيني إيه اللي نفسي أوصلهولك من كل الكلام ده، هقولك ببساطة:</p>
+<p>إنتِ غالية عندي، ومشاعرك تهمني، ووجودك مقدّر، وأنا مش عايز أخسرك بسبب عناد أو سوء تفاهم أو كلمة اتقالت وقت زعل. عايزنا نفضل نتكلم بصدق، ونسمع بعض، ونحافظ على الحلو اللي بينا.</p>
+<p>كل 11/11 وإنتِ بخير يا أجمل جوجو، وكل سنة وقلبك مليان فرحة، وكل سنة وإنتِ محققة حاجة جديدة بتفرحك.</p>
+<p>بحبك يا جوجو قلبي، حب أكبر من رسالة، وأطول من كل الكلام اللي كتبتهولك النهارده. ❤️🥹</p>
+</div>
+
+<div class="divider">❤️ ❤️ ❤️</div>
+
+<!-- الرسالة 4 -->
+<div class="card">
+<h2>𓆩آۅفـޢޢـآ𓆪: يا جوجوووو قلبييييييييييي ❤️😭</h2>
+<p>لسه مخلصتش كلام، ولسه عندي كلام كتير أوي نفسي أقولهولك، وصدقيني لو فضلت أكتب من النهارده لبكرة مش هحس إني قلت كل اللي جوايا. النهارده 11/11، وأنا مش عايز اليوم ده يعدّي من غير ما أقولك قد إيه إنتِ إنسانة غالية عندي، وقد إيه أنا ممتن إنك بقيتي جزء من حياتي.</p>
+<p>بصي يا جوجو، عايزك تقري اللي جاي براحتك، ومتعديش أي كلمة بسرعة… 🥹❤️</p>
+<p>أنا بحب وجودك في يومي، بحب لما ألاقي منك رسالة، وبحب لما تحكيلي عن حاجة حصلت معاكي، حتى لو حاجة صغيرة جدًا. بحب لما نتكلم وننسى الوقت، ولما نهزر على حاجات محدش غيرنا ممكن يفهمها، ولما تبقي بتقولي كلام عادي وأنا أفضل فاكره وأضحك لوحدي بعدين.</p>
+<p>بحب إن لينا تفاصيل محدش يعرفها غيرنا، وذكريات لما بفتكرها بحس إنها غالية عليا. يمكن في حاجات بالنسبالك عادية، بس أنا ساعات بحتفظ بيها في دماغي كأنها أحلى ذكرى في الدنيا.</p>
+<p>يا جوجو، أنا نفسي أكون الشخص اللي تقدري تتكلمي معاه من غير خوف من الحكم عليكي، الشخص اللي يسمعك للآخر، واللي لما تختلفوا معاه يفضل محترمك ومقدّر كلامك. مش عايزك تخافي تعبّري عن زعلك، ولا تحسي إنك لازم تخبي أي حاجة جواكي عشان الدنيا تمشي.</p>
+<p>وعايزك تعرفي إنك مش مطالبة تفضلي مبسوطة طول الوقت عشاني، ولا مطالبة تردي على كل رسالة بنفس كمية الكلام. خدي راحتك، وكوني على طبيعتك، لأنك تستاهلي تكوني مرتاحة ومطمنة.</p>
+<h3>نيجي بقى لعيون جوجو الجميلة 😂❤️</h3>
+<p>أنا مش عارف أعمل إيه مع العيون دي، يعني الواحد ييجي يكتب رسالة جدية ورومانسية، يفتكر عيونك ينسى كان بيكتب إيه أصلًا 😂. عيونك بالنسبالي من التفاصيل اللي ليها مكانة خاصة، وضحكتك كمان، وطريقتك لما تدلعي، وحتى لما تتقمصي وتبقي عاملة فيها زعلانة من الدنيا كلها. بس برضه زعلك مش هزار، ولو أنا السبب فيه فحقك عليا.</p>
+<p>عارفة إيه؟ نفسي لما تبقي زعلانة متحسيش إن لازم تخوضي معركة عشان حد يفهمك. نفسي أسمعك من أول مرة، وأهتم بالحاجات اللي بتضايقك حتى لو أنا شايفها بسيطة. لأن اللي يضايقك يستحق إني أفهمه، مش أقلل منه.</p>
+<p>ولو الزمن رجع بيا لأي موقف قصّرت فيه معاكي، كنت هتمنى أتصرف بشكل أحسن، وأختار كلامي بعناية أكتر، وأفكر في إحساسك قبل ما أتكلم. بس أنا مقدرش أغيّر اللي فات، أقدر بس أتعلم منه وأحاول أخلي اللي جاي أحسن.</p>
+<p>يا جوجو، أنا عايز أقولك شكرًا على كل مرة ضحكتيني فيها، وكل مرة شاركتيني فيها حاجة من يومك، وكل مرة حسستيني إن فيه حد أقدر أشاركه تفاصيل حياتي. وشكرًا حتى على اللحظات اللي علمتني إن الحب مش كلام حلو وبس، الحب كمان مسؤولية واحترام واهتمام وصبر.</p>
+<h3>وعندي ليكي شوية اعترافات بمناسبة 11/11 😂❤️</h3>
+<ul>
+<li>* أنا ممكن أكون داخل أقولك كلمتين وألاقي نفسي كتبتلك كتاب كامل.</li>
+<li>* اسمك لما يظهر قدامي بيخليني أبتسم من غير ما أخطط.</li>
+<li>* بحب أسمع منك حتى لو بتحكيلي عن أبسط حاجة.</li>
+<li>* ساعات ببقى عايز أقولك كلام حلو كتير ومبعرفش أرتبه.</li>
+<li>* عيونك ليها نصيب كبير من كلامي النهارده 😂.</li>
+<li>* دلعك محتاج صبر من العالم كله، بس هو جزء من جوجو اللي بحبها.</li>
+<li>* بحب لما تبقي على طبيعتك ومش بتحاولي تمثلي إنك حد تاني.</li>
+<li>* نفسي أشوفك ناجحة وفخورة بنفسك.</li>
+<li>* نفسي كل خلاف بينا يعلمنا نفهم بعض أكتر.</li>
+<li>* وأهم اعتراف: إنتِ مش شخص عادي بالنسبالي يا جوجو. ❤️</li>
+</ul>
+<h3>ورسالة صغيرة من قلبي لقلبك…</h3>
+<p>لو في يوم حسيتي إن الدنيا تقيلة، افتكري إنك تستاهلي الراحة والفرحة، وإنك مش لازم تحلي كل حاجة مرة واحدة. لو حلم اتأخر، ده مش معناه إنه ضاع. ولو يوم كان صعب، ده مش معناه إن كل الأيام هتبقى زيه.</p>
+<p>خليكي دايمًا مؤمنة بنفسك، وبلاش تسمحي لأي موقف يخليكي تنسي إن ليكي قيمة كبيرة. افرحي بنجاحاتك حتى لو صغيرة، وافتخري بنفسك حتى لو محدش لاحظ تعبك. أنا أتمنى أشوفك دايمًا بتكبري في أحلامك وبتحققي الحاجات اللي نفسك فيها.</p>
+<p>ويا رب أكون دايمًا سبب في ضحكة حلوة، مش سبب في دمعة. ويا رب لما نفتكر الأيام دي بعدين نكون فاكرين حاجات كتير حلوة، ومواقف ضحكنا فيها من قلبنا، وكلام طيب اتقال بينا، ومشاعر اتعاملنا معاها باحترام.</p>
+<p>Happy 11/11 يا جوجو قلبييييي ❤️🥹</p>
+<p>كل سنة وإنتِ بخير، وكل سنة وإنتِ سعيدة، وكل سنة وأحلامك بتقرب منك، وكل سنة وقلبك مرتاح، وكل سنة وإنتِ عارفة إنك غالية ومحبوبة وتستاهلي كل خير.</p>
+<p>وأنا هختم الرسالة دي بحاجة واحدة:</p>
+<p>مش هقولك إن عندي كلام يكفي يوصفك، لأن مفيش كلام كفاية أصلًا. بس هقولك إن فيه ولد اسمه أحمد قاعد يكتب رسالة طويلة جدًا، وكل شوية يفتكر حاجة حلوة في جوجو فيضيف سطر جديد، وكل ما يقول خلصت يكتشف إن لسه عنده كلام.</p>
+<p>بحبك يا جوجو قلبي، ويا رب تفضلي دايمًا بخير، ويا رب نعرف نحافظ على الحلو بينا ونكون أحنّ على بعض في كل مرة. ❤️😭</p>
+<p>11/11 مش مجرد تاريخ… دي حجة حلوة أقولك فيها كل الكلام اللي ساعات بننسى نقوله. 💗</p>
+</div>
+
+<div class="divider">❤️ ❤️ ❤️</div>
+
+<!-- الرسالة 5 - الطويلة -->
+<div class="card">
+<h2>يا جوجوووو قلبييييييييييييييييييييييي ❤️😭</h2>
+<p>استعدي بقى، عشان المرة دي مش رسالة وخلاص، دي حكاية طويلة من أحمد لجوجو، حكاية فيها كلام كتير، واعترافات، وذكريات، ووعود، وحب، واعتذار، وكل حاجة نفسي أوصلهالك في يوم 11/11. عايزك تقريها على مهلك، وكل ما تلاقي نفسك ابتسمتي عند جملة، افتكري إن فيه حد كتبها مخصوص عشان يفرّحك. 🥹❤️</p>
+<h3>💌 HAPPY 11/11 MY JOJO ❤️</h3>
+<p>To my favorite girl, my beautiful JOJO, my قلبّي.</p>
+<p>يا جوجو قلبي، يا أجمل اسم ممكن أشوفه على شاشة موبايلي، يا صاحبة العيون اللي مهما اتكلمت عنها مش هعرف أوصف جمالها، يا صاحبة الضحكة اللي نفسي أشوفها دايمًا، يا البنت اللي ليها مكانة مختلفة عند أحمد…</p>
+<p>أنا مش عارف أبدأ منين، ومش عارف حتى الرسالة دي هتنتهي إمتى، لأن كل ما أفتكر حاجة حلوة فيكي ألاقي نفسي عايز أكتب عنها، وكل ما أكتب كلمة أحس إن فيه عشر كلمات تانيين مستنيين دورهم. أنا عايز النهارده أقولك كلام مش مجرد كلام بيتقال في مناسبة، عايز أقولك حاجات يمكن مقلتهاش قبل كده بالشكل الكافي.</p>
+<p>عارفة يا جوجو؟ ساعات بنقابل أشخاص كتير، ونتعرف على ناس كتير، ونعيش أيام شبه بعضها، لكن فيه أشخاص بيخلوا للتفاصيل طعم مختلف. الشخص ده ممكن يبقى سبب إن يوم عادي جدًا يتحول ليوم حلو، وممكن رسالة صغيرة منه تفضل مرسومة في دماغنا طول اليوم. وإنتِ بالنسبالي بقيتي من الناس اللي وجودهم ليه معنى، واللي تفاصيلهم بتفضل في الذاكرة حتى بعد ما الكلام يخلص.</p>
+<p>أنا بحب إنك موجودة في حياتي، وبحب إن فيه اسم لما أشوفه أحس إن عندي حد عايز أحكيله عن يومي، وبحب إن فيه إنسانة أقدر أشاركها حاجات صغيرة يمكن غيري يشوفها عادية، لكن أنا بحب أشاركها معاكي.</p>
+<p>يا جوجو، أنا عايزك تعرفي إنك مش محتاجة تعملي أي حاجة عشان تكوني غالية. مش محتاجة تكوني طول الوقت بتضحكي، ولا طول الوقت بتتكلمي، ولا طول الوقت بتقولي كلام حلو. إنتِ ليكي قيمتك ومكانتك وإنتِ على طبيعتك، في أيام فرحتك وأيام تعبك، في لحظات قوتك ولحظات ضعفك، وفي كل حالاتك.</p>
+<p>أنا بحب جوجو اللي بتضحك، وبحب جوجو اللي بتهزر، وبحب جوجو اللي بتدلع، وبحترم جوجو اللي بتزعل وبتحتاج وقت ومساحة عشان ترتاح. ❤️</p>
+<h3>🥹 عايز أتكلم عن عيونك شوية…</h3>
+<p>يا بنتي هو أنا هفضل أقول إيه عن العيون دي؟ 😂❤️</p>
+<p>أنا كل ما أفتكر عيونك بحس إن الوصف كله بيقف عند نقطة معينة، مش عشان مفيش كلام، لكن عشان مهما اخترت كلمات هحس إنها مش كفاية. عيونك من التفاصيل اللي ليها جمال خاص عندي، ونفسي دايمًا أشوفها مبسوطة ومليانة فرحة.</p>
+<p>وبحب ضحكتك، وبحب لما تبقي بتتكلمي بحماس، وبحب لما تحكيلي عن حاجة حصلت معاكي وتدخلي في تفاصيل كتير، وبحب حتى الحكايات اللي تبدأ بـ«بص بقى» ومتبقاش عارفين هتنتهي فين 😂.</p>
+<p>وبحب دلعك يا جوجو، وبحب شقاوتك، وبحب طريقتك اللي بتخلي الكلام العادي يبقى له طعم تاني. بس عندي اعتراض رسمي: إنتِ ساعات بتبقي كيوت زيادة عن اللزوم، وده محتاج يتراجع فيه قرار من الجهات المختصة 😂😭❤️.</p>
+<h3>❤️ عايز أقولك على حاجة أهم من كل الكلام الحلو…</h3>
+<p>أنا مش عايز أبقى شخص بيعرف يقول كلام جميل وبس. عايز كلامي يبقى ليه معنى في تصرفاتي. عايز لما أقولك إن مشاعرك مهمة، تلاقي إني فعلًا بسمعك. ولما أقولك إنك غالية، تلاقي احترام وتقدير في طريقة تعاملي معاكي.</p>
+<p>ولو في يوم قصّرت، أو اتصرفت بطريقة زعلتك، أو خليتك تحسي إنك مش متقدّرة، فأنا بعتذرلك من قلبي. مش هطلب منك تنسي بسرعة، ومش هقولك إن رسالة 11/11 المفروض تمسح أي زعل. بالعكس، أنا عايز أفهمك، وأسمع منك، وأتعلم من اللي حصل.</p>
+<p>أنا عارف إن الاعتذار الحقيقي مش كلمة آسف وبس؛ الاعتذار إن الواحد يعترف بغلطه، ويحاول يصلحه، ويثبت إنه فهم إيه اللي ضايق الشخص اللي قدامه.</p>
+<p>وعايزك تعرفي إن ليكي الحق تقولي إنك زعلانة، وليكي الحق تعبّري عن إحساسك، وليكي الحق تطلبي الاهتمام والاحترام. مش لازم تخافي إن كلامك يضايقني لمجرد إنك بتتكلمي عن حاجة وجعتك.</p>
+<p>أنا نفسي نكون دايمًا واضحين مع بعض، من غير تخمين، ومن غير عناد، ومن غير ما كل واحد يستنى التاني يفهم لوحده. نفسي نتكلم ونفهم بعض ونحل أي مشكلة بهدوء.</p>
+<h3>💗 جوجو، تعرفي إيه اللي نفسي أعيشه معاكي؟</h3>
+<p>نفسي يكون عندنا ذكريات كتير نرجعلها بعدين ونضحك عليها.</p>
+<p>نفسي نفتكر أول مرة ضحكنا فيها من قلبنا، وأول موقف حسينا فيه إننا فاهمين بعض، وأول مرة كل واحد فينا حكى للتاني عن حلم نفسه يحققه.</p>
+<p>نفسي نشارك بعض النجاحات الصغيرة قبل الكبيرة، ونشجع بعض في الأيام اللي الحماس فيها بيقل.</p>
+<p>نفسي لما تنجحي في حاجة تبقي أول واحدة فرحانة بنفسك، وتفتخري بتعبك ومجهودك.</p>
+<p>ونفسي لما أنا أحقق حاجة حلوة، أشاركك فرحتي، وتبقي فرحانة بيا زي ما أنا هكون فرحان بنجاحك.</p>
+<p>ونفسي نفضل فاكرين إن كل واحد فينا ليه أحلامه وحياته وطموحاته، وإن الحب الجميل هو اللي يشجعنا نكبر وننجح، مش اللي يخلينا ننسى نفسنا أو نضغط على بعض.</p>
+<p>عارفة يا جوجو؟ أنا مش محتاج كل يوم يحصل فيه حدث كبير عشان يبقى يوم مميز. ساعات رسالة صباح الخير، أو سؤال بسيط عن اليوم، أو ضحكة في نص الكلام، ممكن تكون كفاية جدًا عشان اليوم يبقى أحلى.</p>
+<p>نفسي نعيش تفاصيل بسيطة، بس تكون صادقة وحقيقية.</p>
+<h3>🫂 ولو جه يوم وحسيتي إنك مش بخير…</h3>
+<p>عايزك تفتكري إن مشاعرك مهمة، وإنك مش مطالبة تشرحي كل حاجة فورًا. خدي وقتك، واهتمي بنفسك، ومتضغطيش على قلبك عشان ترضي أي حد.</p>
+<p>ولو حبيتي تتكلمي، اتكلمي براحتك. ولو احتجتي مساحة، خديها. ولو فيه حاجة مضايقاكي مني، قوليها بوضوح وأنا هحاول أسمعك من غير ما أحوّل كلامك لخناقة.</p>
+<p>أنا مش عايزك تخافي من الصراحة معايا، لأن الصراحة والاحترام هما اللي يخلوا أي علاقة أحسن.</p>
+<p>ويا رب متوصليش أبدًا لمرحلة تحسي فيها إنك لازم تخبي حزنك عشان متتعبيش حد. إنتِ تستاهلي حد يسمعك ويقدّر اللي جواكي.</p>
+<h3>😂❤️ وبما إننا بنتكلم عن جوجو…</h3>
+<p>لازم أفتح ملف الدلع والشقاوة!</p>
+<p>يا جوجو يا ست البنات، يا صاحبة «أنا زعلانة» اللي ساعات بتخليني أقعد أفكر أنا عملت إيه 😂، يا صاحبة الدلع اللي لو دخل مسابقة عالمية هياخد المركز الأول من غير منافسة.</p>
+<p>إنتِ عارفة إن عندك موهبة غريبة؟ ممكن تبقي بتتكلمي في موضوع عادي جدًا، وفجأة تقولي كلمة تخليني أضحك وأفضل فاكرها. وممكن تبقي بتدلعي بطريقة تخلي الواحد ينسى هو كان داخل يقول إيه أصلًا.</p>
+<p>بس بعيدًا عن الهزار، أنا بحب طبيعتك، وبحب إنك تكوني مرتاحة وإنتِ بتتكلمي معايا، وبحب إنك متحسيش إنك محتاجة تمثلي أو تتصنعي أي حاجة.</p>
+<p>خليكي جوجو، بكل تفاصيل جوجو، لأن أجمل حاجة إنك تكوني إنتِ. ❤️</p>
+<h3>💌 11/11 — اعترافات من أحمد لجوجو</h3>
+<ul>
+<li>* أنا ممتن إننا اتعرفنا.</li>
+<li>* بحب أسمع تفاصيل يومك حتى لو كانت بسيطة.</li>
+<li>* بحب لما تحكيلي عن أحلامك.</li>
+<li>* بحب ضحكتك جدًا.</li>
+<li>* عيونك من أكتر التفاصيل اللي بحبها فيكي.</li>
+<li>* بحب طريقتك في الكلام.</li>
+<li>* بحب هزارك حتى لما بتكسبي عليا فيه 😂.</li>
+<li>* بحب لما تبقي على طبيعتك.</li>
+<li>* نفسي أشوفك ناجحة في كل حاجة بتحلمي بيها.</li>
+<li>* نفسي أكون شخص مريح في حياتك.</li>
+<li>* نفسي أتعلم أفهمك أكتر.</li>
+<li>* نفسي لما تزعلي مني أسمعك بدل ما أجادلك.</li>
+<li>* نفسي نحتفل بنجاحات بعض.</li>
+<li>* نفسي نعمل ذكريات حلوة كتير.</li>
+<li>* نفسي نضحك على مواقفنا القديمة.</li>
+<li>* نفسي أفضل أقولك كلام حلو من غير ما أكرر نفس الكلام.</li>
+<li>* نفسي متنسيش أبدًا قيمتك.</li>
+<li>* نفسي تكوني فخورة بنفسك.</li>
+<li>* نفسي كل يوم يكون عندك سبب جديد للفرحة.</li>
+<li>* ونفسي تعرفي إن الرسالة دي مهما طالت، لسه مش كفاية أوصف بيها مكانتك عندي.</li>
+</ul>
+<h3>🌷 رسالة لجوجو في المستقبل…</h3>
+<p>يا جوجو، لو رجعتي قرأتي الرسالة دي بعد شهور أو سنين، أتمنى تكوني وقتها حققتي حاجات كتير كنتِ بتحلمي بيها.</p>
+<p>أتمنى تكوني أقوى، وأسعد، وواثقة في نفسك أكتر. أتمنى تكوني لسه بتضحكي من قلبك، ولسه بتحبي الحاجات اللي بتفرحك، ولسه عندك أحلام كبيرة نفسك توصليلها.</p>
+<p>أتمنى تفتكري إنك تستاهلي كل خير، وإن أي نجاح وصلتي له كان وراه تعب ومجهود يستحقوا التقدير.</p>
+<p>وأتمنى لما تفتكري 11/11 تفتكري إن فيه رسالة طويلة جدًا اتكتبت مخصوص ليكي، وإن كل كلمة فيها كان المقصود منها إنك تحسي بالتقدير والفرحة.</p>
+<p>ولو كان بينا خلاف وقتها، أتمنى نكون اتعلمنا منه، وفهمنا بعض أكتر، وعرفنا إن الاعتذار مش ضعف، وإن احترام مشاعر بعض أهم من إن حد فينا يكسب النقاش.</p>
+<h3>❤️ وآخر جزء… بس مش آخر حب</h3>
+<p>يا جوجو قلبي، أنا عايز أشكرك على كل لحظة حلوة، وعلى كل ضحكة، وعلى كل حكاية، وعلى كل تفصيلة شاركتيني فيها.</p>
+<p>شكرًا على وجودك، وشكرًا على إنك بقيتي شخص ليه مكانة خاصة عندي. ولو في حاجة نفسي أوعدك بيها، فهي إني أحاول أخلي كلامي قد أفعالي، وأتعامل معاكي باحترام واهتمام، وأفتكر دايمًا إن قلبك ومشاعرك مش حاجة بسيطة.</p>
+<p>أنا مش هقولك إن الدنيا هتبقى مثالية، ولا إننا عمرنا ما هنختلف، لكن أتمنى نعرف نعدّي أي اختلاف بطريقة صحية، من غير تجريح، ومن غير ضغط، ومن غير ما ننسى إن كل واحد فينا إنسان له مشاعره.</p>
+<p>ويا رب تفضلي دايمًا بخير، ويا رب كل حاجة نفسك فيها تقرب منك، ويا رب تشوفي في نفسك الجمال والقيمة اللي تستاهليهم.</p>
+<p>Happy 11/11 يا جوجويييييي ❤️</p>
+<p>كل سنة وإنتِ طيبة، وكل سنة وإنتِ سعيدة، وكل سنة وإنتِ محققة أحلامك، وكل سنة وضحكتك منورة أيامك.</p>
+<p>وكل سنة وإنتِ عارفة إنك غالية، وإنك تستاهلي كلام حلو وأفعال أحلى، وإن مفيش رسالة مهما كانت طويلة تقدر تختصر كل المشاعر اللي جوا صاحبها.</p>
+<p>بحبك يا جوجو، وبحب اسمك، وبحب دلعك، وبحب عيونك، وبحب كل ذكرى حلوة بينا.</p>
+<p>من أحمد لجوجو… مش مجرد Happy Message، دي رسالة فيها كل الكلام اللي كان نفسه يقولهولك في يوم 11/11. 🥹❤️</p>
+<p>P.S: لو وصلتي لآخر الرسالة، فإنتِ رسميًا خلصتي أطول امتحان قراءة في التاريخ، والجائزة إنك تدلعي نفسك وتبتسمي 😂❤️</p>
+<div class="card final-confession">
+<h2>كلمة من أحمد لجني ❤️</h2>
+<p>انا مش داخل اتسلى يجني انا بجد بحبك وبقعد ابص عليكي في درس ومش بركز اصلا في درس بركز في عيونك انتي ان شاءلله اول حب ليا عشان بجد بقعد افكر فيكي طول وقت لدرجه ان بحلم بيكي بعد إذنك نفسي توافقي انا مش شبه عيال تانيه واقولك تعالي نخرج ولا ابعتيلي صور انا مش عايز كدا طبعاً انا عايزك تكوني معايا وفي حياتي نشجع بعض في دروس وكمان نصلي ونبق لي بعض بحبك اوي اوي اوي اوي اوي يجني</p>
+<p class="final-sign">بحبك يا جوجو ❤️<br>من أحمد</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>❤️ من أحمد لجوجو قلبي ❤️</p>
+<p>بحبك يا جوجو ❤️🥹</p>
+</div>
+</main>
+
+<script>
+const loader=document.getElementById('loader');
+const fill=document.getElementById('loadFill');
+const percent=document.getElementById('loaderPercent');
+const runner=document.getElementById('loaderRunner');
+let progress=0;
+const loading=setInterval(()=>{
+  progress=Math.min(100,progress+Math.ceil(Math.random()*4));
+  fill.style.width=progress+'%'; percent.textContent=progress+'%'; runner.style.left=progress+'%';
+  if(progress>=100){clearInterval(loading);percent.textContent='100%';setTimeout(()=>loader.classList.add('hide'),550);}
+},75);
+const env=document.getElementById('env3'),hint=document.getElementById('eHint'),stage=document.getElementById('stage'),msg=document.getElementById('message');
+let opened=false;
+env.addEventListener('click',()=>{
+  if(opened)return; opened=true; hint.style.opacity=0;
+  env.classList.add('open');
+  setTimeout(()=>createHearts(70),450);
+  setTimeout(()=>createHearts(90),1500);
+  setTimeout(()=>createHearts(60),2600);
+  setTimeout(()=>env.classList.remove('open'),4600);
+  setTimeout(()=>env.classList.add('gone'),6100);
+  setTimeout(()=>{stage.style.display='none';msg.classList.add('show');window.scrollTo(0,0);startTyping();},7100);
+});
+let skipAll=false,userScrolled=false;
+['wheel','touchmove'].forEach(e=>addEventListener(e,()=>{userScrolled=true},{passive:true}));
+function startTyping(){
+  const leaves=[...msg.querySelectorAll('.sec-title,#all h2,#all h3,#all p,#all li,#all .divider')];
+  const footer=msg.querySelector('.footer');footer.style.display='none';
+  const cards=[...msg.querySelectorAll('.card')];
+  const reveal=el=>{for(let n=el;n&&n!==msg;n=n.parentElement)n.style.display='';};
+  const jobs=leaves.map(el=>{
+    const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const nodes=[];
+    while(w.nextNode())if(w.currentNode.nodeValue.trim())nodes.push(w.currentNode);
+    const parts=nodes.map(n=>({n,t:n.nodeValue.match(/\S+\s*/g)||[]}));
+    parts.forEach(p=>p.n.nodeValue='');
+    return {el,parts};
+  });
+  cards.forEach(c=>c.style.display='none');
+  jobs.forEach(j=>{if(j.el.id!=='message')j.el.style.display='none'});
+  const caret=document.createElement('span');caret.className='caret';
+  const skip=document.createElement('button');skip.id='skipBtn';skip.textContent='اعرضي الكل ⏩';
+  skip.onclick=()=>{skipAll=true};document.body.appendChild(skip);
+  const follow=el=>{if(userScrolled)return;const r=el.getBoundingClientRect();if(r.bottom>innerHeight*.78)scrollBy(0,r.bottom-innerHeight*.6);};
+  const finish=()=>{caret.remove();skip.remove();footer.style.display='';createHearts(40);};
+  let ji=0,pi=0,wi=0,cnt=0;
+  (function tick(){
+    if(skipAll){jobs.forEach(j=>{reveal(j.el);j.parts.forEach(p=>p.n.nodeValue=p.t.join(''))});return finish();}
+    if(ji>=jobs.length)return finish();
+    const j=jobs[ji];
+    if(pi===0&&wi===0)reveal(j.el);
+    if(!j.parts.length){ji++;return tick();}
+    const p=j.parts[pi],w=p.t[wi];
+    p.n.nodeValue+=w;p.n.parentNode.insertBefore(caret,p.n.nextSibling);
+    if(++cnt%5===0)follow(j.el);
+    let d=55+Math.random()*40;
+    if(/[.؟?!…]\s*$/.test(w))d+=380;else if(/[،,:]\s*$/.test(w))d+=170;
+    wi++;
+    if(wi>=p.t.length){wi=0;pi++;}
+    if(pi>=j.parts.length){pi=0;ji++;d+=420;follow(j.el);}
+    setTimeout(tick,d);
+  })();
+}
+function createHearts(amount=35){
+  const c=document.getElementById('hearts');
+  for(let i=0;i<amount;i++){
+    const s=document.createElement('div');s.className='heart';
+    s.textContent=['❤️','💗','💖','💕','💘','🥹'][Math.floor(Math.random()*6)];
+    s.style.left=Math.random()*100+'vw';s.style.fontSize=(15+Math.random()*25)+'px';
+    s.style.animationDelay=(Math.random()*1.2)+'s';c.appendChild(s);
+    setTimeout(()=>s.remove(),5500);
+  }
+}
+setInterval(()=>{if(msg.classList.contains('show'))createHearts(14)},8000);
+</script>
+</body>
+</html>
